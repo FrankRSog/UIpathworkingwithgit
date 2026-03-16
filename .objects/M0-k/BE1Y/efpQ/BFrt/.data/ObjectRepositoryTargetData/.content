@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tVwl2PY360-IPaE_Cqy_ew" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com" CVScreenId="f22fa0c3-e024-4cef-93c0-76ace575bd39" CvElementArea="651, 669, 257, 63" CvTextArea="739, 689, 113, 21" CvTextArgument="Work Items" CvType="Button" DesignTimeRectangle="655, 673, 250, 57" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='                          Work Items' parentid='dashmenu' tag='BUTTON' /&gt;" Guid="d7bd9705-a792-48f0-a4cb-f1d19b1946d5" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f22fa0c3-e024-4cef-93c0-76ace575bd39" CvTextArea="861, 506, 587, 50" CvTextArgument="frank.ruempol@sogeti.com" CvType="Text" DesignTimeRectangle="866, 503, 582, 51" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='STRONG' type='' class='' aaname='frank.ruempol@sogeti.com' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='frank.ruempol@sogeti.com' /&gt;" Guid="a90435d8-88cc-466b-8cb2-7b479b8479fa" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="7eb9eef333a53ece32a7c426a647da59.png" xmlns="">0qJ1rlGma6UuWf-x7fgwLMg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
