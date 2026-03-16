@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
     <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
@@ -257,20 +257,25 @@
       <AssemblyReference>System.Net.Sockets</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,416" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Email" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ExtractDataTable" />
     </Sequence.Variables>
-    <ui:ManualTrigger Result="{x:Null}" DisplayName="The user wants to start this process manually to read an Excel file and place orders on a website." sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
-    <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ExtractDataTable]" DisplayName="Read the first 3 columns from an Excel file named &quot;orders.xlsx&quot; into the dt_ExtractDataTable variable." sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="[&quot;&quot;&quot;&quot;&quot;&quot;]" SheetName="Sheet1" WorkbookPath="orders.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExtractDataTable]" DisplayName="Iterate through each row of the extracted data table to place an order for each one." sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="The user wants to start this process manually to read an Excel file and place orders on a website." sap:VirtualizedContainerService.HintSize="450,78.66666666666667" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ExtractDataTable]" DisplayName="Read the first 3 columns from an Excel file named &quot;orders.xlsx&quot; into the dt_ExtractDataTable variable." sap:VirtualizedContainerService.HintSize="450,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="[&quot;&quot;&quot;&quot;&quot;&quot;]" SheetName="Sheet1" WorkbookPath="orders.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExtractDataTable]" DisplayName="Iterate through each row of the extracted data table to place an order for each one." sap:VirtualizedContainerService.HintSize="450,194.66666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Click the OK button on the pop-up, Select the head option, Select the body option, Enter the number of legs, Click the Preview button, Click the ORDER button, Click the ORDER ANOTHER ROBOT button" HealingAgentBehavior="Job" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" IsDisplayNameAuto="True" ScopeGuid="62a00278-fb87-4bb1-9932-c168130f05b4" Version="V2">
               <uix:NApplicationCard.AutoGenerationOptions>
                 <uix:GenerationOptions ExpectedInputs="{x:Null}" Prompt="{x:Null}" Url="{x:Null}">
